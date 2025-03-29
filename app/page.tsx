@@ -82,7 +82,7 @@ export default function Home() {
                     {
                       msg.sender === "user" ? null : <div className={`w-[5px] rounded-lg ${msg.text === "ERROR" ? "bg-red-500" : "bg-orange-500"}`}></div>
                     }
-                    <div className="max-w-xs p-2">{msg.text === "BOT_LOADING" ? <div className="flex"><LoadingSpinner /><p className="ms-2 text-orange-600">กรุณารอสักครู่</p></div> : msg.text === "ERROR" ?
+                    <div className="max-w-xs p-2 text-warp break-words">{msg.text === "BOT_LOADING" ? <div className="flex"><LoadingSpinner /><p className="ms-2 text-orange-600">กรุณารอสักครู่</p></div> : msg.text === "ERROR" ?
                       <div className="flex text-red-600"><span className="material-icons">
                         error
                       </span><p className="mx-2">เกิดข้อผิดพลาด กรุณาลองใหม่ภายหลัง</p></div> : msg.text}</div>

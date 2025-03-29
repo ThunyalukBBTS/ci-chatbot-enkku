@@ -1,79 +1,71 @@
 "use client";
-import { useState } from "react";
-import { useRouter } from 'next/navigation'
-
+import NavSidebar from "@/app/components/NavSidebar";
+import ProfileCard from "@/app/components/profileCard"
 
 export default function About() {
-    const router = useRouter()
-
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-    const toggleSidebar = () => {
-        setIsSidebarOpen(!isSidebarOpen);
-    };
     return (
         (
-            <div className="bg-gray-100">
-                <div className="flex h-screen">
-                    {/* Sidebar */}
-                    <div
-                        className={`bg-gray-800 text-white md:w-100 w-screen p-2 fixed left-0 top-0 h-full z-10 transition-transform duration-300 ${isSidebarOpen ? "translate-y-0" : "-translate-y-full"
-                            }`}
-                    >
-                        <div className="flex justify-between mt-3">
-                            <h2 className="text-2xl mb-4 mt-2 ms-5 font-bold">ENKKU | ChatBot</h2>
-                            <button onClick={toggleSidebar} className={`me-2 hover:cursor-pointer p-1 border-1 rounded-md border-gray-600 ${isSidebarOpen ? "d-none" : null}`}>
-                                <span className="material-icons flex justify-center items-center m-0 pt-1.5 px-1.5">
-                                    close
-                                </span>
-                            </button>
+            <div className="h-screen bg-gray-100">
+                <div className="flex flex-col">
+                    <NavSidebar />
+                    <main className="flex-1 p-4 bg-gray-100 items-center justify-center">
+                        <h1 className="text-gray-900 text-3xl font-bold text-center">เกี่ยวกับผู้พัฒนา</h1>
+                        <h1 className="max-w-screen-xl md:max-w-screen-md lg:max-w-screen-xl mx-auto text-gray-900 text-xl text-center">เว็บไซต์นี้เป็น Mini project ในรายวิชา<br /><b>EN813307 Computational Intelligence</b><br />ปีการศึกษา 2567 มีสมาชิกดังนี้</h1>
+                        <div className="max-w-screen-xl md:max-w-screen-md lg:max-w-screen-xl mx-auto mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                            <ProfileCard id="653040128-1" name="นายธัญลักษณ์ ศศิวรินทร์กุล" imageUrl="./BB.png" contact="thunyaluk.sa@kkumail.com" />
+                            <ProfileCard id="653040138-8" name="นายพีรวัส หารพรม" imageUrl="./P.png" contact="peerawat.h@kkumail.com" />
+                            <ProfileCard id="653040454-8" name="นายธีรเทพ ป้องที" imageUrl="./F.png" contact="teeratep.p@kkumail.com" />
+                            <ProfileCard id="653040622-3" name="นายธนภัทร ศิริวงศ์ศาล" imageUrl="./W.png" contact="tanapat.sir@kkumail.com" />
                         </div>
-                        <ul className="mt-5 ms-5 text-xl">
-                            <li className="mb-5 hover:text-gray-400 hover:cursor-pointer">
-                                <button type="button" onClick={() => router.push('/')}>
-                                    Home
-                                </button>
-                            </li>
-                            <li className="mb-5 hover:text-gray-400 hover:cursor-pointer">
-                                <button type="button" onClick={() => router.push('/about')}>
-                                    About us
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="flex-1 flex flex-col">
-                        {/* Navbar */}
-                        <header className="bg-white shadow-xs z-2">
-                            <div className="flex items-center justify-between p-4 mx-auto max-w-screen-xl">
-                                <button
-                                    className="p-2 justify-center items-center hover:cursor-pointer"
-                                    onClick={toggleSidebar} // Toggle sidebar on menu click
-                                >
-                                    <span
-                                        className="material-icons pt-1 px-1 text-orange-500 font-bold"
-                                        style={{ fontSize: "30px" }}
-                                    >
-                                        menu
-                                    </span>
-                                </button>
-                                <div className="items-center mx-auto">
-                                    <img
-                                        src="https://www.en.kku.ac.th/web/wp-content/uploads/2021/06/Logo-web.png"
-                                        className="h-12"
-                                        alt="EN KKU Logo"
-                                    />
+                        <h1 className="text-gray-900 mt-5 text-3xl font-bold text-center">โครงสร้างการพัฒนาเว็บไซต์</h1>
+                        <div className="max-w-screen-xl text-xl text-black mx-auto grid grid-cols-1 lg:grid-cols-3">
+                            <div className=" col-span-1 m-2 justify-center text-center">
+                                <div className="p-2 md:flex md:flex-col ">
+                                    <div className="text-orange-500"><b>Front-end</b> (web application)</div>
+                                    <div className="my-2"><img className="mx-auto" src="https://skillicons.dev/icons?i=nextjs,ts,tailwind" /></div>
+                                    <ul className="text-[18px]">
+                                        <li>NextJs</li>
+                                        <li>TypeScript</li>
+                                        <li>TailwindCSS</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </header>
+                            <div className=" col-span-1 m-2 justify-center text-center">
+                                <div className="p-2 md:flex md:flex-col ">
+                                    <div className="text-orange-500"><b>Back-end</b>  (RAG and API)</div>
+                                    <div className="my-2 flex justify-center">
+                                        <img className="" src="https://skillicons.dev/icons?i=py,flask" />
+                                        <img src="./open_router.jpg" className="h-[50px] w-fit ps-2" />
+                                        <img src="https://chathub.gg/_next/image?url=https%3A%2F%2Fapp.chathub.gg%2Flogos%2Fllama.png&w=256&q=75" className="h-[50px] w-fit ps-2" />
+                                        <img src="https://yt3.googleusercontent.com/MopgmVAFV9BqlzOJ-UINtmutvEPcNe5IbKMmP_4vZZo3vnJXcZGtybUBsXaEVxkmxKyGqX9R=s900-c-k-c0x00ffffff-no-rj" className="h-[50px] w-fit ps-2" />
+                                    </div>
+                                    <ul className="text-[18px]">
+                                        <li>Python</li>
+                                        <li>FlaskAPI - API connector</li>
+                                        <li>Open router AI - model provider</li>
+                                        <li>Llama 3.3 70b - model</li>
+                                        <li>OpenAI - library</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className=" col-span-1 m-2 justify-center text-center">
+                                <div className="p-2 md:flex md:flex-col ">
+                                    <div className="text-orange-500"><b>Deployment</b> </div>
+                                    <div className="my-2 flex justify-center">
+                                        <img className="" src="https://skillicons.dev/icons?i=vercel,azure,github,docker" />
 
-                        {/* Chat Area */}
-                        <main className="flex-1 overflow-y-auto p-4 bg-gray-100">
+                                    </div>
+                                    <ul className="text-[18px]">
+                                        <li>Vercel - web hosting</li>
+                                        <li>Azure - container instance</li>
+                                        <li>GitHub - version control</li>
+                                        <li>Docker - container builder</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
 
-                        </main>
-
-
-                    </div>
                 </div>
             </div>
         )

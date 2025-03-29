@@ -15,7 +15,7 @@ export default function NavSidebar() {
         <div className="w-ful">
             {/* Sidebar */}
             <div
-                className={`bg-orange-700 text-white md:w-100 w-screen p-2 fixed left-0 top-0 h-full z-10 transition-transform duration-300 ${isSidebarOpen ? "translate-y-0" : "-translate-y-full"
+                className={`bg-orange-500 text-white md:w-100 w-screen p-2 fixed left-0 top-0 h-full z-10 transition-transform duration-300 ${isSidebarOpen ? "translate-y-0" : "-translate-y-full"
                     }`}
             >
                 <div className="flex justify-between mt-3">
@@ -27,12 +27,12 @@ export default function NavSidebar() {
                 <ul className="mt-5 ms-5 text-xl">
                     <li className="mb-5 hover:text-gray-400 hover:cursor-pointer">
                         <button type="button" onClick={() => router.push("/")}>
-                            Home
+                            หน้าหลัก
                         </button>
                     </li>
                     <li className="mb-5 hover:text-gray-400 hover:cursor-pointer">
                         <button type="button" onClick={() => router.push("/about")}>
-                            About us
+                            เกี่ยวกับผู้พัฒนา
                         </button>
                     </li>
                 </ul>
@@ -40,8 +40,8 @@ export default function NavSidebar() {
 
             {/* Navbar */}
             <header className="bg-white shadow-xs z-2">
-                <div className="flex items-center justify-between p-4 mx-auto max-w-screen-xl">
-                    <button className="p-2 justify-center items-center hover:cursor-pointer" onClick={toggleSidebar}>
+                <div className="flex items-center justify-between py-4 mx-auto max-w-screen-xl">
+                    <button className="justify-center items-center hover:cursor-pointer" onClick={toggleSidebar}>
                         <span className={`material-icons text-orange-600 flex justify-center items-center m-0 pt-1.5 px-1.5 ${isSidebarOpen ? "invisible" : ""
                             }`} style={{ fontSize: "30px" }}>
                             menu

@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EN KKU | ChatBot",
-  description: "EN KKU | ChatBot",
+  title: "ENKKU | ChatBot",
+  description: "ENKKU | ChatBot",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="th">
       <head>
         <link
           rel="stylesheet"

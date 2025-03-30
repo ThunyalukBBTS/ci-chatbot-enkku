@@ -19,20 +19,20 @@ export default function NavSidebar() {
                     }`}
             >
                 <div className="flex justify-between mt-3">
-                    <h2 className="text-2xl mb-4 mt-2 ms-5 font-bold">ENKKU | ChatBot</h2>
+                    <h2 onClick={() => router.push("/")} className="text-2xl mb-4 mt-2 ms-5 font-bold hover:cursor-pointer">ENKKU | ChatBot</h2>
                     <button onClick={toggleSidebar} className="me-2 hover:cursor-pointer p-1 rounded-md">
                         <span className="material-icons flex justify-center items-center m-0 pt-1.5 px-1">close</span>
                     </button>
                 </div>
                 <ul className="mt-5 ms-5 text-xl">
-                    <li className="mb-5 hover:text-gray-400 hover:cursor-pointer">
-                        <button type="button" onClick={() => router.push("/")}>
+                    <li className="mb-5 hover:text-gray-400">
+                        <button className="hover:cursor-pointer" type="button" onClick={() => router.push("/")}>
                             หน้าหลัก
                         </button>
                     </li>
-                    <li className="mb-5 hover:text-gray-400 hover:cursor-pointer">
-                        <button type="button" onClick={() => router.push("/about")}>
-                            เกี่ยวกับผู้พัฒนา
+                    <li className="mb-5 hover:text-gray-400">
+                        <button className="hover:cursor-pointer" type="button" onClick={() => router.push("/about")}>
+                            เกี่ยวกับเรา
                         </button>
                     </li>
                 </ul>
@@ -47,7 +47,7 @@ export default function NavSidebar() {
                             menu
                         </span>
                     </button>
-                    <div className="items-center mx-auto">
+                    <div className="items-center mx-auto hover:cursor-pointer" onClick={() => router.push("https://www.en.kku.ac.th/web/")}>
                         <img
                             src="https://www.en.kku.ac.th/web/wp-content/uploads/2021/06/Logo-web.png"
                             className="h-12"

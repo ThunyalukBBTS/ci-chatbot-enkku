@@ -9,7 +9,7 @@ export default function About() {
                 <div className="flex flex-col">
                     <NavSidebar />
                     <main className="flex-1 p-4 bg-gray-100 items-center justify-center">
-                        <h1 className="text-gray-900 text-3xl font-bold text-center">เกี่ยวกับผู้พัฒนา</h1>
+                        <h1 className="text-gray-900 text-3xl font-bold text-center">เกี่ยวกับเรา</h1>
                         <h1 className="max-w-screen-xl md:max-w-screen-md lg:max-w-screen-xl mx-auto text-gray-900 text-xl text-center">เว็บไซต์นี้เป็น Mini project ในรายวิชา<br /><b>EN813307 Computational Intelligence</b><br />ปีการศึกษา 2567 มีสมาชิกดังนี้</h1>
                         <div className="max-w-screen-xl md:max-w-screen-md lg:max-w-screen-xl mx-auto mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                             <ProfileCard id="653040128-1" name="นายธัญลักษณ์ ศศิวรินทร์กุล" imageUrl="./BB.png" contact="thunyaluk.sa@kkumail.com" />
@@ -44,7 +44,8 @@ export default function About() {
                                         <li>FlaskAPI - API connector</li>
                                         <li>Open router AI - model provider</li>
                                         <li>Llama 3.3 70b - model</li>
-                                        <li>OpenAI - library</li>
+                                        <li>OpenAI - model library</li>
+                                        <li>LangChain - LLM library</li>
                                     </ul>
                                 </div>
                             </div>

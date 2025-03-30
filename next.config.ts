@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/chat",
-        destination: "http://20.198.193.50:8000/chat",
+        destination: "http://40.119.246.237:8000/chat",
       },
     ];
   },

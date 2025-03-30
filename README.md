@@ -24,7 +24,8 @@ This project is a mini project of EN813307 Computational Intelligence 2024. Team
 - FlaskAPI - API connector
 - Open router AI - model provider
 - Llama 3.3 70b - model
-- OpenAI - library
+- OpenAI - model library
+- LangChain - LLM library
 
 ### Deployment
 <img src="https://skillicons.dev/icons?i=vercel,azure,github,docker" />
